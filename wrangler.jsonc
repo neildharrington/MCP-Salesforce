@@ -1,5 +1,10 @@
 {
   "name": "mcp-salesforce-worker",
   "main": "src/index.ts",
-  "compatibility_date": "2025-06-23"
+  "compatibility_date": "2025-06-23",
+  "vars": {
+    "CLIENT_ID": "Iv23liuS4Bls26Ciex3m",
+    "CLIENT_SECRET": "aae73be079b7bbac11f9aee4490d38128a4324b3",
+    "REDIRECT_URI": "https://7aee760c-sfdc5.neildharrington.workers.dev/"
+  }
 }
