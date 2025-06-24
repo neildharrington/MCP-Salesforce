@@ -1,5 +1,5 @@
 {
-  "name": "mcp-salesforce-worker",
+  "name": "sfdc5",
   "main": "src/index.ts",
   "compatibility_date": "2025-06-23",
   "vars": {
