@@ -3,7 +3,7 @@ export default {
     const url = new URL(request.url);
     // Redirect to OAuth provider
     if (url.pathname === '/login') {
-      const authUrl = new URL('https://provider.com/oauth/authorize');
+      const authUrl = new URL('https://github.com/login/oauth/authorize');
       authUrl.searchParams.set('client_id', env.CLIENT_ID);
       authUrl.searchParams.set('redirect_uri', env.REDIRECT_URI);
       authUrl.searchParams.set('response_type', 'code');
@@ -15,7 +15,7 @@ export default {
       const code = url.searchParams.get('code');
       if (!code) return new Response('Missing code', { status: 400 });
       // Exchange code for token
-      const tokenUrl = 'https://provider.com/oauth/access_token';
+      const tokenUrl = 'https://github.com/login/oauth/access_token';
       const response = await fetch(tokenUrl, {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
