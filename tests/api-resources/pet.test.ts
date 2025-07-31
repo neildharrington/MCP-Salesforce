@@ -142,7 +142,10 @@ describe('resource pet', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('uploadImage', async () => {
-    const responsePromise = client.pet.uploadImage(0);
+    const responsePromise = client.pet.uploadImage(
+      0,
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -158,10 +161,8 @@ describe('resource pet', () => {
     await expect(
       client.pet.uploadImage(
         0,
-        {
-          additionalMetadata: 'additionalMetadata',
-          image: await toFile(Buffer.from('# my file contents'), 'README.md'),
-        },
+        await toFile(Buffer.from('# my file contents'), 'README.md'),
+        { additionalMetadata: 'additionalMetadata' },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Sfdc.NotFoundError);
