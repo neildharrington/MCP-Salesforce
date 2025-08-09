@@ -23,7 +23,7 @@ Methods:
 - <code title="get /pet/findByStatus">client.pet.<a href="./src/resources/pet.ts">findByStatus</a>({ ...params }) -> PetFindByStatusResponse</code>
 - <code title="get /pet/findByTags">client.pet.<a href="./src/resources/pet.ts">findByTags</a>({ ...params }) -> PetFindByTagsResponse</code>
 - <code title="post /pet/{petId}">client.pet.<a href="./src/resources/pet.ts">updateByID</a>(petID, { ...params }) -> void</code>
-- <code title="post /pet/{petId}/uploadImage">client.pet.<a href="./src/resources/pet.ts">uploadImage</a>(petID, { ...params }) -> PetUploadImageResponse</code>
+- <code title="post /pet/{petId}/uploadImage">client.pet.<a href="./src/resources/pet.ts">uploadImage</a>(petID, image, { ...params }) -> PetUploadImageResponse</code>
 
 # Store
 
